@@ -1,9 +1,4 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ActivityIndicator,
-} from "react-native";
+import { View, Text, TouchableOpacity, ActivityIndicator } from "react-native";
 import { useRouter } from "expo-router";
 
 import styles from "./nearbyjobs.style";
@@ -15,9 +10,9 @@ import useFetch from "../../../hook/useFetch";
 const Nearbyjobs = () => {
   const router = useRouter();
   const { data, isLoading, error } = useFetch("search", {
-    query: "Python developer in Texas, USA",
-    page: "5",
-    num_pages: "5",
+    query: "Python developer in Texas",
+    page: "1",
+    num_pages: "1",
   });
 
   return (
